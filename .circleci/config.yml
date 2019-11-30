@@ -1,0 +1,14 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: ubuntu:17.10
+    steps:
+      - checkout
+      - run:
+          command: |
+            apt update
+            apt install pandoc
+      - run:
+          command: pandoc --standalone --to=latex+header_attributes+auto_identifiers+superscript+footnotes+inline_notes --number-sections --output=Density-Operator.tex Density-Operator.md
+          # working_directory: paper
