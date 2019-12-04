@@ -12,6 +12,8 @@ jobs:
       - run:
           command: pandoc --standalone --to=latex+header_attributes+auto_identifiers+superscript+footnotes+inline_notes --number-sections --output=Density-Operator.tex Density-Operator.md
           # working_directory: paper
+      - store_artifacts:
+          path: Density-Operator.md
 
 workflows:
   version: 2
@@ -23,3 +25,4 @@ workflows:
               only:
                 - draft
                 - master
+                - draft-first
