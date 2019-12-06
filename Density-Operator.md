@@ -1,3 +1,8 @@
+---
+- documentclass: ltjsarticle
+---
+
+
 # About Density operator
 
 このドキュメントでは，NMRの磁化のふるまいを理解するのに必要な量子力学，なかでも密度演算子／密度行列について解説します。
@@ -17,3 +22,15 @@
 References
 
 - 入門　量子ダイナミクス --時間依存の量子力学を中心に--（上）
+
+
+## 1スピンのSchrödinger方程式と解
+
+## 密度演算子［密度行列］の導入とLeuville-von Neumann方程式
+
+### 混合状態
+
+## 密度演算子の直積展開？
+
+## 相互作用表示　～Schrödinger描像とHeisenberg描像と関連付けて～
+
