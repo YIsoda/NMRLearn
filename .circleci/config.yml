@@ -23,7 +23,5 @@ workflows:
       - build:
           filters:
             branches:
-              only:
-                - draft
-                - master
-                - draft-first
+              ignore:
+                - pdf
