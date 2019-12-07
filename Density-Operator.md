@@ -41,7 +41,24 @@ Leuville-von Neumann方程式$\displaystyle i\hbar \frac{∂\hat{ρ}}{∂t} = [\
 
 ### 混合状態
 
-## 密度演算子の直積展開？
+## 密度演算子の直積展開
+
+（$\hbar$が入るので多少面倒だがSI系？を採用）
+
+一般に，任意のエルミート演算子は，$\mathrm{Tr}[\hat{F_i}, \hat{F_j}] = cδ_{ij}$のように規格直交化された演算子の完全系$\{\hat{F_i}\}$で展開できる（Wikipedia情報 [理論｜直積演算子 - Wikipedia](https://ja.wikipedia.org/wiki/%E7%9B%B4%E7%A9%8D%E6%BC%94%E7%AE%97%E5%AD%90#%E7%90%86%E8%AB%96)）
+
+密度演算子も同様に展開できるので，基底演算子として，各スピン角運動量演算子の直積を採用する。
+（いくつかの近似が入る）
+
+今，1スピン系について
+
+$$E/2 = \frac{1}{2}\begin{pmatrix}1&0\\0&1\end{pmatrix},I_x, I_y, O_z$$
+を基底にとると，例えばある状態が密度演算子で$ρ(t=0) \propto I_z$などと表現されるだろう。前節で確認したように，この期待値は
+
+$$
+\left\langle \hat{I_z}\right\rangle =　\sum_i \Braket{ψ_i|\hat{I_z}ρ|ψ_i} \propto \sum_i \Braket{ψ_i|\hat{I_z}I_z|ψ_i}
+$$
+（Z成分角運動量の場合）と表された（一応$ψ$に挟まれてる部分の左の$\hat{I_z}$が今期待値を求めたい演算子$A$，右の$I_z$が系の状態を表す密度演算子のつもり）。
 
 ## 相互作用表示　～Schrödinger描像とHeisenberg描像と関連付けて～
 
