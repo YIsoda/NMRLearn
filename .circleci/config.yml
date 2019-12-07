@@ -14,7 +14,7 @@ jobs:
           command: pandoc --standalone --to=latex+header_attributes+auto_identifiers+superscript+footnotes+inline_notes --number-sections --output=Density-Operator.tex Density-Operator.md
           # working_directory: paper
       - run:
-          command: cluttex -e lualatex --max-iterations 1 Density-Operator.tex
+          command: lualatex Density-Operator.tex
       - store_artifacts:
           path: Density-Operator.tex
       - store_artifacts:
