@@ -5,7 +5,12 @@ indent: true
 secnumdepth: 3
 documentclass: ltjsarticle
 header-includes:
-	- \usepackage{braket}
+  - \usepackage{braket}
+  - \ltjsetparameter{jacharrange={-2,-3}}
+  - \setmainfont[Ligatures=TeX]{TeX Gyre Pagella}
+  - \setsansfont[BoldFont=Inter Bold]{Inter}
+  - \unimathsetup{math-style=ISO,bold-style=ISO}
+  - \setmathfont{TeX Gyre Pagella Math}
 microtypeoptions: false
 ---
 
