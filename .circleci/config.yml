@@ -8,7 +8,8 @@ jobs:
       - run:
           command: |
             apt update
-            apt install -y pandoc
+            curl -O https://github.com/jgm/pandoc/releases/download/2.8.0.1/pandoc-2.8.0.1-1-amd64.deb
+            dpkg -i pandoc-2.8.0.1-1-amd64.deb
             apt install -y ca-certificates
             apt install -y texlive-fonts-recommended texlive-fonts-extra fonts-texgyre
       - run:
