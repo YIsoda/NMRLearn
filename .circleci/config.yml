@@ -10,6 +10,7 @@ jobs:
             apt update
             apt install -y pandoc
             apt install -y ca-certificates
+            apt install -y texlive-fonts-recommended texlive-fonts-extra fonts-texgyre
       - run:
           command: pandoc --standalone --to=latex+header_attributes+auto_identifiers+superscript+footnotes+inline_notes --number-sections --output=Density-Operator.tex Density-Operator.md
           # working_directory: paper
