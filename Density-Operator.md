@@ -106,3 +106,17 @@ $\hat{I}_z\hat{I_z} = \begin{pmatrix}1&0\\0&-1\end{pmatrix}\begin{pmatrix}1&0\\0
   と表される。
 
 - Heisenberg描像
+
+  - Heisenberg描像での波動関数$Ψ_\mathrm{H}(t)$を$Ψ_\mathrm{H}(t) = e^{\frac{i}{\hbar}Ht}Ψ_\mathrm{S}(t)$と定義すると，
+    
+    $$Ψ_\mathrm{H}(t) =  e^{\frac{i}{\hbar}Ht} \left( e^{-\frac{i}{\hbar}Ht}Ψ_\mathrm{S}(0)\right) = Ψ_\mathrm{S}(0)$$
+    で，状態ベクトルは時間変化しない。
+  - あるいは，
+
+    $$\langle A\rangle = \Braket{U(t)Ψ_\mathrm{S}(0)|A|U(t)Ψ_\mathrm{S}(0)} = \Braket{Ψ_\mathrm{S}(0)|\left(U^{-1}(t)AU(t)\right)|Ψ_\mathrm{S}(0)}$$
+    で$\left(U^{-1}(t)AU(t)\right) = A_\mathrm{H}$，$Ψ_\mathrm{S}(0) = Ψ_\mathrm{H}(0)$とおくと
+
+    $$\Braket{Ψ_\mathrm{H}(0)|A_\mathrm{H}(t)|Ψ_\mathrm{H}(0)}$$
+    となり，期待値の変化が演算子が時間変化に依存するように書ける。
+
+  このように，Schrödinger描像とことなり，状態ベクトルは時間変化せず演算子が時間変化するように表現できるが，期待値はSchrödinger描像と一致する。
