@@ -45,9 +45,29 @@ Leuville-von Neumann方程式$\displaystyle i\hbar \frac{∂\hat{ρ}}{∂t} = [\
 
 Schrodingere方程式
 
+#### Leuville von Neumann方程式の導出
+
 $$i\hbar\frac{∂ψ}{∂t} = \hat{H}ψ$$
 （形式的に解くと$ψ(t) = e^{-i\hat{H}t/\hbar} ψ(0)$）と密度演算子の定義からLeuville-von Neumann方程式を導こう。
 
+純粋状態（混合状態ではなくある状態ベクトルで表される）について考える。この密度演算子
+
+$$\hat{ρ} = \ket{ψ}\bra{ψ}$$
+の両辺を時間微分すると，
+
+$$\frac{∂\hat{ρ}}{∂t} = \left(\frac{∂}{∂t}\ket{ψ_i}\right)\bra{ψ_i} + \ket{ψ_i}\left(\frac{∂}{∂t}\bra{ψ_i}\right)$$
+
+Schrodingere方程式より$\frac{∂\ket{ψ}}{∂t} = \frac{1}{i\hbar}\hat{H}\ket{ψ}$およびエルミート共役をとって$\frac{∂\bra{ψ}}{∂t} = -\frac{1}{i\hbar}\bra{ψ}\hat{H}$（$\hat{H}$はエルミート演算子）を代入すると，
+
+$$
+\begin{aligned}
+&= \left(\frac{1}{i\hbar}\hat{H}\ket{ψ}\right)\bra{ψ} - \ket{ψ}\left(\frac{1}{i\hbar}\bra{ψ}\hat{H}\right)\\
+&= \frac{1}{i\hbar}\left(\hat{H}\hat{ρ} - \hat{ρ}\hat{H}\right)\\
+&= \frac{1}{i\hbar} \left[\hat{H},\hat{ρ} \right]
+\end{aligned}
+$$
+
+参考 https://ocw.kyoto-u.ac.jp/ja/graduate-school-of-science-jp/course-chemical-statics/pdf/lect10.pdf
 
 
 ### 混合状態
