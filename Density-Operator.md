@@ -56,7 +56,8 @@ $$i\hbar\frac{∂ψ}{∂t} = \hat{H}ψ$$
 
 （$\hbar$が入るので多少面倒だがSI系？を採用）
 
-一般に，任意のエルミート演算子は，$\mathrm{Tr}[\hat{F_i}, \hat{F_j}] = cδ_{ij}$のように規格直交化された演算子の完全系$\{\hat{F_i}\}$で展開できる（Wikipedia情報 [理論｜直積演算子 - Wikipedia](https://ja.wikipedia.org/wiki/%E7%9B%B4%E7%A9%8D%E6%BC%94%E7%AE%97%E5%AD%90#%E7%90%86%E8%AB%96)）
+一般に，任意のエルミート演算子は，$\mathrm{Tr}[\hat{F_i}, \hat{F_j}] = cδ_{ij}$のように規格直交化された演算子の完全系$\{\hat{F_i}\}$で展開できる
+（Wikipedia情報： [理論｜直積演算子 - Wikipedia](https://ja.wikipedia.org/wiki/%E7%9B%B4%E7%A9%8D%E6%BC%94%E7%AE%97%E5%AD%90#%E7%90%86%E8%AB%96)）
 
 密度演算子も同様に展開できるので，基底演算子として，各スピン角運動量演算子の直積を採用する。
 （いくつかの近似が入る）
