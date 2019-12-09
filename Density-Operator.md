@@ -31,6 +31,7 @@ microtypeoptions: false
 References
 
 - 入門　量子ダイナミクス --時間依存の量子力学を中心に--（上）
+  - 第9章
 
 ## 1スピンのSchrödinger方程式と解
 
@@ -41,6 +42,13 @@ $\left|1\right\rangle$
 密度行列$\displaystyle \hat{ρ} = \sum_i p_i \ket{ψ}\bra{ψ}$
 
 Leuville-von Neumann方程式$\displaystyle i\hbar \frac{∂\hat{ρ}}{∂t} = [\hat{H}, \hat{ρ}] = \hat{H}\hat{ρ} - \hat{ρ}\hat{H}$
+
+Schrodingere方程式
+
+$$i\hbar\frac{∂ψ}{∂t} = \hat{H}ψ$$
+（形式的に解くと$ψ(t) = e^{-i\hat{H}t/\hbar} ψ(0)$）と密度演算子の定義からLeuville-von Neumann方程式を導こう。
+
+
 
 ### 混合状態
 
@@ -73,3 +81,27 @@ $\hat{I}_z\hat{I_z} = \begin{pmatrix}1&0\\0&-1\end{pmatrix}\begin{pmatrix}1&0\\0
 - 相互作用描像（Interaction picture）
 
 それぞれ添え字${}_\mathrm{S}$，${}_\mathrm{H}$，${}_\mathrm{I}$を用いて区別する場合がある。
+
+- Schrodinger描像
+  
+  演算子は時間変化せず，状態ベクトルが時間変化するというもの。
+
+  $$i\hbar \frac{∂Ψ_\mathrm{S}(t)}{∂t} = \hat{H}_\mathrm{S}Ψ(t)_\mathrm{S}$$
+
+  $\hat{H}$が時間に依存しない場合，（$\hat{H}$はただの定数として計算しても答えと合致）
+
+  $$Ψ(t)_\mathrm{S} = e^{-\frac{i}{\hbar}\hat{H}_\mathrm{S}t}Ψ_\mathrm{S}(0)$$
+  である。$e^{-\frac{i}{\hbar}\hat{H}_\mathrm{S}t} = U(t)$と置き，$U$を時間発展演算子と呼ぶ。
+
+  また，ある演算子$A$の期待値（期待値は時間の関数である）は
+
+  $$
+  \begin{aligned}
+  \langle A\rangle &= \Braket{Ψ(t)|A|Ψ(t)} \\
+  &=\Braket{Ψ(t)|A|Ψ(t)}\\
+  &=\Braket{U(t)Ψ(0)|A|U(t)Ψ(0)}
+  \end{aligned}
+  $$
+  と表される。
+
+- Heisenberg描像
