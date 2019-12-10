@@ -9,6 +9,7 @@ header-includes:
   - \ltjsetparameter{jacharrange={-2,-3}}
   - \setmainfont[Ligatures=TeX]{TeX Gyre Pagella}
   - \setmathfont{TeX Gyre Pagella Math}
+  - \usepackage{cancel}
 microtypeoptions: false
 ---
 
