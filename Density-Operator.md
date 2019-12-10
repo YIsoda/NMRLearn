@@ -140,3 +140,36 @@ $\hat{I}_z\hat{I_z} = \begin{pmatrix}1&0\\0&-1\end{pmatrix}\begin{pmatrix}1&0\\0
     となり，期待値の変化が演算子が時間変化に依存するように書ける。
 
   このように，Schrödinger描像とことなり，状態ベクトルは時間変化せず演算子が時間変化するように表現できるが，期待値はSchrödinger描像と一致する。
+
+  ここまで，Heisenberg描像のハミルトニアンを$\hat{H}_\mathrm{H}$と書いてSchrödinger描像のハミルトニアンと区別してきたが，
+
+- 相互作用描像（Interaction image）
+  
+  全ハミルトニアン$H$を，$H_0$と$H_1$にわけることを考える（あとで述べるように時間依存のハミルトニアンである場合には時間に依存する部分を$H_1$に含め，$H_0$を時間に依存しないようにとるとよい）。
+
+  $$\hat{H} = \hat{H}_0 + \hat{H}_1$$
+  相互作用描像の波動関数$Ψ_\mathrm{I}(t)$を，Schrödinger描像の波動関数$Ψ_\mathrm{S}(t)$を用いて
+
+  $$Ψ_\mathrm{I}(t) = e^{\frac{i}{\hbar}\hat{H}_0t}Ψ_\mathrm{S}(t) = e^{\frac{i}{\hbar}\hat{H}_0t}e^{-\frac{i}{\hbar}\hat{H}t}Ψ_\mathrm{S}(0)$$
+  と定義する。もし「多くの部分」の時間発展が$H_0$によっているとすると，$e^{\frac{i}{\hbar}\hat{H}_0t}$の時間発展と$e^{-\frac{i}{\hbar}\hat{H}t}$の時間発展が打ち消しあい，$Ψ_\mathrm{I}$はほとんど時間発展しない。
+
+  $Ψ_\mathrm{S} = e^{-\frac{i}{\hbar}\hat{H}_0 t}Ψ_\mathrm{S}(t)$であるから，これを時間依存のSchrödinger方程式に代入すれば相互作用描像の波動関数の運動方程式が得られる。
+
+  $$
+  \begin{aligned}
+  i\hbar\frac{∂}{∂t}\left(  e^{-\frac{i}{\hbar}\hat{H}_0 t}Ψ_\mathrm{I}(t) \right) &= \hat{H} \left(e^{-\frac{i}{\hbar}\hat{H}_0 t}Ψ_\mathrm{I}(t)\right)\\
+  i\hbar e^{-\frac{i}{\hbar}\hat{H}_0 t} \left( -\frac{i}{\hbar}\hat{H}_0 Ψ_\mathrm{I} + \frac{∂Ψ_\mathrm{I}(t)}{∂t}\right) &= (\hat{H}_0 + \hat{H}_1)\left(e^{-\frac{i}{\hbar}\hat{H}_0 t}Ψ_\mathrm{I}(t)\right)\\
+  \cancel{e^{-\frac{i}{\hbar}\hat{H}_0 t}\hat{H}_0 Ψ_\mathrm{I} }+ i\hbar e^{-\frac{i}{\hbar}\hat{H}_0 t} \frac{∂Ψ_\mathrm{I}(t)}{∂t} &= \hat{H}_0 e^{-\frac{i}{\hbar}\hat{H}_0 t}Ψ_\mathrm{I}(t) + \hat{H}_1 e^{-\frac{i}{\hbar}\hat{H}_0 t}Ψ_\mathrm{I}(t) \\
+  &= \cancel{ e^{-\frac{i}{\hbar}\hat{H}_0 t} \hat{H}_0 Ψ_\mathrm{I}(t) } + \hat{H}_1 e^{-\frac{i}{\hbar}\hat{H}_0 t} Ψ_\mathrm{I}(t)
+  \end{aligned}
+  $$
+  （$H_0$と$H_1$のような異なる演算子およびその指数関数は一般に交換しないことに注意。）残った部分に左から$e^{+\frac{i}{\hbar}\hat{H}_0t}$をかけて，
+
+  $$
+  \begin{aligned}
+  i\hbar \frac{∂Ψ_\mathrm{I}(t)}{∂t} &= e^{\frac{i}{\hbar}\hat{H}_0 t} \hat{H}_1 e^{-\frac{i}{\hbar}\hat{H}_0 t}Ψ_\mathrm{I}(t)\\
+  &=\hat{H}_\mathrm{I}Ψ_\mathrm{I}(t)
+  \end{aligned}
+  $$
+  ここで，相互作用描像のハミルトニアンを$\hat{H}_\mathrm{I}$とした。
+  Todo:ラベルがわかりにくい（摂動$H_1$と相互作用ハミルトニアン$H_I$）
