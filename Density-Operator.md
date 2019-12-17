@@ -1,5 +1,5 @@
 ---
-title: 'いまさら納得する　密度演算子・磁化の時間発展'
+title: 'いまさら初歩から納得する　密度演算子・磁化の時間発展'
 author: '磯田洋介'
 indent: true
 secnumdepth: 3
