@@ -68,8 +68,28 @@ $$
 \end{aligned}
 $$
 
+
+さて，混合状態についてはどうだろうか。
+
+
 参考 https://ocw.kyoto-u.ac.jp/ja/graduate-school-of-science-jp/course-chemical-statics/pdf/lect10.pdf
 
+#### Leuville von Neumann方程式を形式的に解く
+
+ハミルトニアンが時間に依存しない場合，Leuville von Neumann方程式は形式的に解け，解は$\hat{ρ}(t) = e^{-i\hat{H}t/\hbar} ρ(0) e^{i\hat{H}t/\hbar} = U(t)ρ(0) U(t)^{-1}$となる。ここで，$U$は時間発展演算子などと呼ばれる。
+
+実際，上式をLeuville von Neumann方程式の左辺に代入すると，
+
+$$
+\begin{aligned}
+i\hbar \frac{d}{dt}\left( e^{-i\hat{H}t/\hbar} ρ(0) e^{i\hat{H}t/\hbar} \right) &= i\hbar\left(  \frac{d}{dt}(e^{-i\hat{H}t/\hbar} )ρ(0) e^{i\hat{H}t/\hbar} + e^{-i\hat{H}t/\hbar} ρ(0)  \frac{d}{dt}(e^{i\hat{H}t/\hbar}) \right) \\
+&= i\hbar\left( \left(-\frac{i\hat{H}}{\hbar}\right)e^{-i\hat{H}t/\hbar} ρ(0) e^{i\hat{H}t/\hbar} +e^{-i\hat{H}t/\hbar} ρ(0) \frac{i\hat{H}}{\hbar}e^{i\hat{H}t/\hbar} \right)\\
+&= -i\hbar\left( \frac{i\hat{H}}{\hbar}e^{-i\hat{H}t/\hbar} ρ(0) e^{i\hat{H}t/\hbar} -e^{-i\hat{H}t/\hbar} ρ(0) e^{i\hat{H}t/\hbar}\frac{i\hat{H}}{\hbar} \right)\\
+&= \hat{H}ρ - ρ\hat{H} = [\hat{H}, ρ]
+\end{aligned}
+$$
+（ハミルトニアンは指数の肩でも定数として計算してよく，また$H$とその指数関数は交換できるが密度演算子とハミルトニアン，およびそれらの指数関数は交換可能ではないのでかってに入れ替えたりはしない！）
+となって，これが解になっていることが確認できる。
 
 ### 混合状態
 
