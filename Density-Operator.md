@@ -199,3 +199,62 @@ $\hat{I}_z\hat{I_z} = \begin{pmatrix}1&0\\0&-1\end{pmatrix}\begin{pmatrix}1&0\\0
   $$
   ここで，相互作用描像のハミルトニアンを$\hat{H}_\mathrm{I}$とした。
   Todo:ラベルがわかりにくい（摂動$H_1$と相互作用ハミルトニアン$H_I$）
+
+以上，各描像の演算子や方程式を確認した。相互作用描像は次項で述べるように時間依存接道論の文脈で重要になる。
+
+### 相互作用描像の例：Zeeman相互作用とRF照射のみを考えるケース
+
+時間依存摂動論に入る前に，摂動展開による近似なしでいい場合を考える。ただし，「高温近似・弱く結合したスピン系であること・緩和は無視できる」ことを仮定し（参考：Wikipediaの直積演算子法のページ），したがって系の初期状態は密度演算子$ρ \propto I_z$と表されるとする。
+Z方向の静磁場$\boldsymbol{B} = (0, 0, B)$とRF照射$\boldsymbol{B}_1 = (0, 2B_1 \cos{ω_0 t}, 0)$のみが相互作用として考えるとき，（もともとの/Schrodinger/全）ハミルトニアンは
+
+$$
+\begin{aligned}
+H &= \underbrace{\boldsymbol{I}⋅\boldsymbol{B}?}_{H_0} + (I_x \cos ωt + I_y \cos ωt???)[←後で書く]\\
+&= \hbar ω_0 I_z + 2\hbar ω_1 I_y \cos{ω_0 t}
+\end{aligned}
+$$
+と表せる（ただし磁気回転比$γ$を用いて静磁場に関するラーモア角振動数が$ω_0 = -γB_0$，振動磁場に対する？）。
+
+ここで，ハミルトニアンを
+
+$$
+\begin{aligned}
+H &= \underbrace{\hbar ω_0 I_z}_{H_0} + \underbrace{2\hbar ω_1 I_y \cos{ω_0 t}}_V\\
+&= H_0 + V
+\end{aligned}
+$$
+のように時間に依存しない部分と時間に依存する部分の←？二つの項に分ける。後者は摂動項と呼ばれるが，今回の場合摂動展開による近似は行わない。
+
+さて，相互作用ハミルトニアンは，非摂動ハミルトニアン$H_0$を用いた時間発展演算子$U_0 = e^{-iH_0 t/\hbar}$を用いて，摂動項を
+
+$$
+H_\mathrm{I} = U_0^{-1} V U_0
+$$
+のように変換すればよいのであった。これは，
+
+$$
+\begin{aligned}
+H_\mathrm{I} &= U_0^{-1} V U_0\\
+&= e^{iH_0t/\hbar}2\hbar ω_1I_y\cos{ω_0 t}e^{-iH_0t/\hbar}\\
+&= 2\hbar ω_1\cos{ω_0 t} \left( e^{iω_0 I_z t} I_y e^{-iω_0 I_z t} \right)\\
+&= 2\hbar ω_1\cos{ω_0 t} \left( I_y\cos{ω_0 t} + I_x\sin{ω_0 t} \right)\\
+&= 2\hbar ω_1\left( I_y \cos^2{ω_0 t} + I_x\cos{ω_0 t}\sin{ω_0 t} \right)\\
+&= \hbar ω_1 \left( I_y (1 + \cos{2ω_0 t}) + I_x \sin{2ω_0 t}\right)
+\end{aligned}
+$$
+のように変形でき，このうちラーモア周波数の2倍で振動している成分は“truncate”できて無視されるので，結局相互作用ハミルトニアンは
+
+$$H_\mathrm{I} = \hbar ω_1 I_y$$
+となる。これは時間に依存せず，このハミルトニアンに関するLiuville von Neumann方程式
+
+$$i\hbar\frac{dρ}{dt} = \left[H_\mathrm{I}, ρ\right]$$
+は厳密に解け，また初期状態でZ磁化が生じている（$ρ(t=0)∝I_z$）ことから，相互作用ハミルトニアン$H_\mathrm{I}$の時間発展演算子$U_\mathrm{I}(t)$を用いて
+
+$$
+\begin{aligned}
+ρ(t) &= U_\mathrm{I}(t)ρ(0)U_\mathrm{I}^{-1}(t) = e^{-i ω_1 I_y t}I_z e^{i ω_1 I_y t}\\
+&= I_z \cos{ω_1 t} + I_x \sin{ω_1 t}
+\end{aligned}
+$$
+となる。これは，yパルスによって磁化がy軸回りに回転することを意味し，巨視的な磁化を回転座標系にのせて考えたときと一致する。
+
