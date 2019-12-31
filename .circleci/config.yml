@@ -2,16 +2,24 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: ubuntu:18.04 #buildpack-deps:trusty
+      - image: yisoda/texlive-full-simple:_test
     steps:
       - checkout
       - run:
           command: |
             apt update
-            apt install -y pandoc
+            apt install -y ca-certificates texlive-fonts-recommended texlive-fonts-extra fonts-texgyre wget
+            wget https://github.com/jgm/pandoc/releases/download/2.8.0.1/pandoc-2.8.0.1-1-amd64.deb
+            dpkg -i pandoc-2.8.0.1-1-amd64.deb
       - run:
-          command: pandoc --standalone --to=latex+header_attributes+auto_identifiers+superscript+footnotes+inline_notes --number-sections --output=Density-Operator.tex Density-Operator.md
+          command: pandoc --standalone --to=latex+auto_identifiers --number-sections --output=Density-Operator.tex Density-Operator.md
           # working_directory: paper
+      - run:
+          command: lualatex Density-Operator.tex
+      - store_artifacts:
+          path: Density-Operator.tex
+      - store_artifacts:
+          path: Density-Operator.pdf
 
 workflows:
   version: 2
@@ -20,6 +28,5 @@ workflows:
       - build:
           filters:
             branches:
-              only:
-                - draft
-                - master
+              ignore:
+                - pdf

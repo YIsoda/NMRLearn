@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"mdmath.macros": {
+			// maybe compatible with braket package of latex
+			"\\bra": "\\langle#1|",
+			"\\ket": "|#1\\rangle",
+			"\\Bra": "\\left\\langle#1\\right|",
+			"\\Ket": "\\left| #1 \\right\\rangle",
+			// not completely compatible with braket package
+			"\\braket": "\\langle#1\\rangle",
+			"\\Braket": "\\left\\langle#1\\right\\rangle"
+		}
+	}
+}
