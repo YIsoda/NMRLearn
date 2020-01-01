@@ -1,6 +1,6 @@
 # NMRの時間発展の理解を助ける補足資料
 
-[![CircleCI](https://circleci.com/gh/YIsoda/NMRLearn/tree/draft.svg?style=svg)](https://circleci.com/gh/YIsoda/NMRLearn/tree/draft)
+[![CircleCI](https://circleci.com/gh/YIsoda/NMRLearn/tree/master.svg?style=svg)](https://circleci.com/gh/YIsoda/NMRLearn/tree/master)
 
 本ドキュメントは研究室で授業や演習をやっていて自分が躓いたところなどをまとめてみたものです。
 
