@@ -18,7 +18,7 @@ microtypeoptions: false
 
 > 1. Cross Polarization
 >
->    静磁場の中に異種核スピンI，Sがある場合を考える。二重回転座標系でZeeman相互作用$ω_{0I}I_z + ω_{0S}S_z$は見えなくなり，“truncate”された双極子相互作用は結合定数$d$を用いて
+>    静磁場の中に異種核スピンI，Sがある場合を考える。回転座標系でZeeman相互作用$ω_{0I}I_z + ω_{0S}S_z$は見えなくなり，“truncate”された双極子相互作用は結合定数$d$を用いて
 >    
 >    $$H_\mathrm{d} = dI_z S_z$$
 >    と表される。
